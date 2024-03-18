@@ -1,0 +1,13 @@
+to install typescript: sudo npm i -g typescript
+to initialize typescript in my folder: tsc --init (this will create tsconfig file)
+to check typescript version: tsc -v
+to install node version: nvm isntall 20.11.1 (it requires nvm installled)
+to use a node version: nvm use 20.11.1
+to initialize node in my folder: npm init (this will create default package.json file, if we do npm install, then node_modules folder is created)
+to install types for a package like express or node: npm i --save-dev @types/express, npm i --save-dev @types/node
+we use --save-dev for development purposes, app will run without these also, but the main pakcages need --save only
+inside tsconfig file, use moduleResolution as node, it will let us use import format, import express from 'express' instead of express = require('express')
+node can only compile js files not ts files, so we convert ts to js files using tsc command and then run node app.js
+in tsconfig file, we specify rootDir and outDir, the outDir will create all js files whicch are compiled from ts and stores them in that path, rootDir is path of all ts files present folder that needs to run. 
+
+inside package.json, we specify scripts, inside that sometimes we use npm start but for others we use npm run json-server. so test and start are default, if we want to specify new scripts, we need to use npm run instead of npm itself.
